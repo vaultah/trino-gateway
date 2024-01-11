@@ -53,8 +53,7 @@ public class HaQueryHistoryManager
             }
             return QueryHistory.upcast(QueryHistory.findBySQL(String.join(" ",
                     sql,
-                    "order by created desc",
-                    "limit 2000")));
+                    "order by created desc"));
         }
         finally {
             connectionManager.close();
